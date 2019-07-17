@@ -4,5 +4,5 @@ const yargs = require('./cli/yargs');
 
 const { argv } = yargs;
 
-console.log(argv.f);
-console.log(config.user.key);
+// console.log(argv.f);
+// console.log(config.user.key);

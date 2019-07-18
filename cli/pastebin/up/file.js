@@ -3,7 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
 
-
 const config = require('../../../config');
 const {
   cli, url, choice, err, errFocus, heading, dim,
@@ -12,7 +11,7 @@ const {
 const { log } = console;
 
 // eslint-disable-next-line consistent-return
-const file = (filePath, extension, name) => {
+const file = (filePath, extension, name, userStatus) => {
   let stats = '';
 
   // check if the path exist
@@ -55,7 +54,7 @@ const file = (filePath, extension, name) => {
       log(`Number of lines: ${choice(data.split('\n').length)} (${choice(`${data.length} Characters`)})\n`);
 
       log(heading('User Info:'));
-      if (config.user.key === '') {
+      if (config.user.key === '' || userStatus) {
         log(`No user is logged in so ${choice('Guest User')} is used`);
         log(dim(`A user can be Logged in at ${cli('$ pbin usr')}`));
       } else {
@@ -87,9 +86,9 @@ const file = (filePath, extension, name) => {
         ])
         .then((ans) => {
           if (ans.confirmation) {
-            // TODO: Use request.js
+            // Use request.js
             let body = `api_dev_key=${config.dev.key}&api_option=paste&api_paste_code=${data}`;
-            body += `&api_user_key=${config.user.key}&api_paste_name=${title}&api_paste_format=${ext}&api_paste_private=${config.pb.private}&api_paste_expire_date=${config.pb.expiration}`;
+            body += `&api_user_key=${userStatus ? '' : config.user.key}&api_paste_name=${title}&api_paste_format=${ext}&api_paste_private=${config.pb.private}&api_paste_expire_date=${config.pb.expiration}`;
             request.post({
               headers: { 'content-type': 'application/x-www-form-urlencoded' },
               url: 'https://pastebin.com/api/api_post.php',

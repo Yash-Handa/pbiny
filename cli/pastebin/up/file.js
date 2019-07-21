@@ -58,7 +58,7 @@ const file = (filePath, extension, name, userStatus) => {
         log(`No user is logged in so ${choice('Guest User')} is used`);
         log(dim(`A user can be Logged in at ${cli('$ pbin usr')}`));
       } else {
-        log(`User Name: ${choice(config.user.UserName)}`);
+        log(`User Name: ${choice(config.user.userName)}`);
         log(`User Email: ${choice(config.user.email)}`);
         log(`User Account Type: ${choice(config.user.accountType === 1 ? 'PRO' : 'normal')}`);
       }

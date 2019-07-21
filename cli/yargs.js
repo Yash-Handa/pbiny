@@ -1,7 +1,7 @@
 const yargs = require('yargs');
 const { version } = require('../package');
 const filePath = require('../utils/filePath');
-const { up, dn } = require('./pastebin');
+const { up, dn, config } = require('./pastebin');
 
 yargs
   // up command
@@ -65,8 +65,8 @@ yargs
     },
   )
   .command(
-    ['dn', 'down', 'download'],
-    'Download Content <file|text> to https://pastebin.com',
+    ['dn', 'download'],
+    'Download Content <file|text> from https://pastebin.com',
     yargs => yargs.options({
       f: {
         alias: 'file',
@@ -99,6 +99,50 @@ yargs
         return dn.file(argv.u, filePath(argv.f), argv.p);
       }
       return dn.def(argv.u, argv.p);
+    },
+  )
+  .command(
+    ['config', 'configuration'],
+    'Configuration for Upload and Download commands',
+    yargs => yargs.options({
+      ext: {
+        alias: ['extension', 'format'],
+        describe: 'Pass this flag to change the default Extension / Format for the paste to be uploaded. The complete list of available Extensions is at: https://pastebin.com/api#5 ',
+        type: 'boolean',
+        requiresArg: false,
+        nargs: 0,
+        group: 'Upload Config:',
+      },
+      exp: {
+        alias: ['expiration'],
+        describe: 'Pass this flag to change the default Expiration for the paste to be uploaded.',
+        type: 'boolean',
+        requiresArg: false,
+        nargs: 0,
+        group: 'Upload Config:',
+      },
+      priv: {
+        alias: ['privacy'],
+        describe: 'Pass this flag to change the default Privacy of the paste to be uploaded.',
+        type: 'boolean',
+        requiresArg: false,
+        nargs: 0,
+        group: 'Upload Config:',
+      },
+      f_ext: {
+        alias: ['file_extension'],
+        describe: 'Pass this flag to change the default extension of the file to which the paste is to be copied / downloaded.',
+        type: 'boolean',
+        requiresArg: false,
+        nargs: 0,
+        group: 'Download Config:',
+      },
+    }),
+    (argv) => {
+      if (argv.ext || argv.exp || argv.priv || argv.f_ext) {
+        return config.config(argv.ext, argv.exp, argv.priv, argv.f_ext);
+      }
+      return config.def();
     },
   )
   .help()

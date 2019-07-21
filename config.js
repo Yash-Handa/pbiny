@@ -1,4 +1,5 @@
 const path = require('path');
+// TODO: Check if the .env file exist i.e., the dev key is present
 const env = require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 if (env.error) {
@@ -11,16 +12,16 @@ module.exports = {
   },
   user: {
     key: process.env.user_key_test || '',
-    UserName: process.env.user_key || '',
-    email: process.env.user_key || '',
-    accountType: process.env.user_key || '', // 0 normal, 1 PRO
+    userName: process.env.userName || '',
+    email: process.env.email || '',
+    accountType: process.env.accountType || '', // 0 normal, 1 PRO
   },
   pb: {
-    extension: process.env.user_key || 'text',
-    expiration: process.env.user_key || 'N',
-    private: process.env.user_key || 0, // 0 Public, 1 Unlisted, 2 Private
+    extension: process.env.extension || 'text',
+    expiration: process.env.expiration || 'N',
+    private: process.env.privacy || 0, // 0 Public, 1 Unlisted, 2 Private
   },
   file: {
-    fileExtension: process.env.user_key || 'txt',
+    fileExtension: process.env.fileExtension || 'txt',
   },
 };

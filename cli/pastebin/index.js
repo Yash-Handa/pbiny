@@ -8,4 +8,8 @@ module.exports = {
     file: require('./dn/file'),
     def: require('./dn/def'),
   },
+  config: {
+    config: require('./config/config'),
+    def: require('./config/def'),
+  },
 };

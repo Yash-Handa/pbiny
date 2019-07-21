@@ -67,7 +67,7 @@ const def = () => {
     log(`No user is logged in so ${choice('Guest User')} is used`);
     log(dim(`A user can be Logged in at ${cli('$ pbin usr')}`));
   } else {
-    log(`User Name: ${choice(config.user.UserName)}`);
+    log(`User Name: ${choice(config.user.userName)}`);
     log(`User Email: ${choice(config.user.email)}`);
     log(`User Account Type: ${choice(config.user.accountType === 1 ? 'PRO' : 'normal')}`);
   }
@@ -80,7 +80,7 @@ const def = () => {
         type: 'list',
         name: 'userType',
         message: 'Choose how would you like to create the paste?',
-        choices: [`as ${config.user.UserName}`, 'as Guest User'],
+        choices: [`as ${config.user.userName}`, 'as Guest User'],
         default: 0,
         when: config.user.key !== '',
       },
@@ -146,7 +146,7 @@ const def = () => {
       if (data.length > 0) {
         log(heading('Paste Data:'));
         log(data, ` (${choice(data.length, 'Characters')})\n`);
-        // TODO:  return promise
+        // send data to the function
         finalPrompt({
           data,
           ext,
@@ -189,7 +189,7 @@ const def = () => {
                 }
                 log(heading('\nPaste Data:'));
                 log(data, ` (${choice(data.length, 'Characters')})\n`);
-                // TODO:  return a promise
+                // send data to the function
                 finalPrompt({
                   data,
                   ext,

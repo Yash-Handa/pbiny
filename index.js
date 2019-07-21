@@ -1,3 +1,4 @@
+// load the .env file to the config file
 const config = require('./config');
 // ./cli/yargs returns the configured yargs object and not the argv
 const yargs = require('./cli/yargs');

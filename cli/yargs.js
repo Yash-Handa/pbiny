@@ -1,7 +1,7 @@
 const yargs = require('yargs');
 const { version } = require('../package');
 const filePath = require('../utils/filePath');
-const up = require('./pastebin');
+const { up, dn } = require('./pastebin');
 
 yargs
   // up command
@@ -62,6 +62,43 @@ yargs
         return up.text(argv.t, argv.e, argv.n, argv.g);
       }
       return up.def();
+    },
+  )
+  .command(
+    ['dn', 'down', 'download'],
+    'Download Content <file|text> to https://pastebin.com',
+    yargs => yargs.options({
+      f: {
+        alias: 'file',
+        describe: 'relative path to the file where the content is to be downloaded (with extension)',
+        type: 'string',
+        normalize: true,
+        requiresArg: true,
+        nargs: 1,
+      },
+      u: {
+        alias: ['url'],
+        describe: 'url of the paste. Acceptable types: \'https://pastebin.com/xxxxxxx\', \'pastebin.com/xxxxxxx\' or \'xxxxxxx\' where \'xxxxxxx\' is the key of the paste',
+        type: 'string',
+        requiresArg: true,
+        nargs: 1,
+        demandOption: true,
+        group: 'Main / Required Option:',
+      },
+      p: {
+        alias: ['private'],
+        describe: 'Pass this flag if you want to download your private pastes (user should be logged in because Guest user cannot have private pastes)',
+        type: 'boolean',
+        requiresArg: false,
+        nargs: 0,
+        default: false,
+      },
+    }),
+    (argv) => {
+      if (argv.f) {
+        return dn.file(argv.u, filePath(argv.f), argv.p);
+      }
+      return dn.def(argv.u, argv.p);
     },
   )
   .help()

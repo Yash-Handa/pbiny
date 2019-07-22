@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 // load the .env file to the config file
 require('./config');
 // ./cli/yargs returns the configured yargs object and not the argv

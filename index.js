@@ -1,9 +1,8 @@
 // load the .env file to the config file
-const config = require('./config');
+require('./config');
 // ./cli/yargs returns the configured yargs object and not the argv
 const yargs = require('./cli/yargs');
 
 const { argv } = yargs;
 
-// console.log(argv.f);
-// console.log(config.user.key);
+// TODO: Add msg when about the product

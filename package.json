@@ -1,7 +1,7 @@
 {
-  "name": "pbin",
+  "name": "pbiny",
   "version": "1.0.0",
-  "description": "A Node.js CLI to interact with Pastebin directly from the terminal",
+  "description": "A npm package to interact with Pastebin directly from the terminal",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,6 +19,8 @@
     "url": "https://github.com/Yash-Handa/pbin/issues"
   },
   "homepage": "https://github.com/Yash-Handa/pbin#readme",
+  "preferGlobal": true,
+  "bin": { "pbiny": "index.js" },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.2.0",

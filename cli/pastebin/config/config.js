@@ -8,13 +8,6 @@ const {
 const { log } = console;
 
 const changeConfig = (extension, expiration, privacy, fileExtension) => {
-  // console.log({
-  //   extension,
-  //   expiration,
-  //   privacy,
-  //   fileExtension,
-  // });
-
   inquirer
     .prompt([
       {
@@ -72,7 +65,7 @@ const changeConfig = (extension, expiration, privacy, fileExtension) => {
         if (privacy) [data.privacy] = ans.privacy.split(':');
         if (fileExtension) data.fileExtension = ans.fileExt;
 
-        const success = await editENV(data);
+        const success = await editENV(data, 'update');
         if (success === 0) {
           log(heading('\nDefaults Updated !!!\n'));
           return 0;

@@ -1,7 +1,9 @@
 const yargs = require('yargs');
 const { version } = require('../package');
 const filePath = require('../utils/filePath');
-const { up, dn, config } = require('./pastebin');
+const {
+  up, dn, config, usr,
+} = require('./pastebin');
 
 yargs
   // up command
@@ -143,6 +145,34 @@ yargs
         return config.config(argv.ext, argv.exp, argv.priv, argv.f_ext);
       }
       return config.def();
+    },
+  )
+  .command(
+    ['usr', 'user'],
+    'Login or see Logged user',
+    yargs => yargs.options({
+      l: {
+        alias: ['login'],
+        describe: 'Pass this flag to Login a user',
+        type: 'boolean',
+        requiresArg: false,
+        nargs: 0,
+        group: 'Logging User:',
+        conflicts: ['logout'],
+      },
+      logout: {
+        describe: 'Pass this flag to Logout the user',
+        type: 'boolean',
+        requiresArg: false,
+        nargs: 0,
+        group: 'Logging User:',
+        conflicts: ['l', 'login'],
+      },
+    }),
+    (argv) => {
+      if (argv.l) return usr.login();
+      if (argv.logout) return usr.logout();
+      return usr.def();
     },
   )
   .help()

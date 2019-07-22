@@ -69,7 +69,7 @@ const def = () => {
   } else {
     log(`User Name: ${choice(config.user.userName)}`);
     log(`User Email: ${choice(config.user.email)}`);
-    log(`User Account Type: ${choice(config.user.accountType === 1 ? 'PRO' : 'normal')}`);
+    log(`User Account Type: ${choice(config.user.accountType == 1 ? 'PRO' : 'normal')}`);
   }
 
   log('');

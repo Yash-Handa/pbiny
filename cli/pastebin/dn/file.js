@@ -64,7 +64,7 @@ const file = async (url, filePath, priv) => {
   }
 
   const basenameArray = path.basename(filePath).split('.');
-  let ext = config.pb.fileExtension;
+  let ext = config.file.fileExtension;
   let title = '';
   if (basenameArray.length <= 1) {
     // eslint-disable-next-line prefer-destructuring
@@ -72,13 +72,13 @@ const file = async (url, filePath, priv) => {
     // eslint-disable-next-line no-param-reassign
     filePath += `.${config.file.fileExtension}`;
   } else {
-    ext = basenameArray[basenameArray - 1];
-    title = basenameArray[basenameArray - 2];
+    ext = basenameArray[basenameArray.length - 1];
+    title = basenameArray[basenameArray.length - 2];
   }
   log(heading('File Data:'));
   log('File Path:', choice(filePath));
   log('File Name:', choice(title));
-  log('File extension:', choice(ext), dim(ext === config.pb.fileExtension ? ' (default)' : ''));
+  log('File extension:', choice(ext), dim(ext === config.file.fileExtension ? ' (default)' : ''));
 
   let data;
   if (priv) {
@@ -103,7 +103,7 @@ const file = async (url, filePath, priv) => {
   log(data, ` (${choice(data.length, 'Characters')})`);
   log();
 
-  // TODO: ASK for confirmation
+  // ASK for confirmation
   inquirer
     .prompt([
       {

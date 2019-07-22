@@ -17,6 +17,8 @@
     "rules": {
         "no-shadow":"off",
         "global-require":"off",
-        "consistent-return":"off"
+        "consistent-return":"off",
+        "eqeqeq":"off",
+        "no-prototype-builtins":"off"
     }
 }

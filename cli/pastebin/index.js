@@ -12,4 +12,9 @@ module.exports = {
     config: require('./config/config'),
     def: require('./config/def'),
   },
+  usr: {
+    login: require('./usr/login'),
+    def: require('./usr/def'),
+    logout: require('./usr/logout'),
+  },
 };

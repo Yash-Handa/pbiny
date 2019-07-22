@@ -35,7 +35,7 @@ const file = (filePath, extension, name, userStatus) => {
 
   const size = stats.size / 1000.0;
   // check if the file is more than 512 KB and yhe user is not PRO
-  if (size > 512.0 && config.user.accountType !== 1) {
+  if (size > 512.0 && config.user.accountType != 1) {
     log(err('Sorry the file is too big for uploading'));
     log(err(`The max size is ${errFocus('512 KB(0.5 MB)')}${err(' and the given file is of ')}${errFocus(`${size} KB`)}`));
     log(err(`You can read more at: ${url('https://pastebin.com/faq#9')}`));
@@ -60,7 +60,7 @@ const file = (filePath, extension, name, userStatus) => {
       } else {
         log(`User Name: ${choice(config.user.userName)}`);
         log(`User Email: ${choice(config.user.email)}`);
-        log(`User Account Type: ${choice(config.user.accountType === 1 ? 'PRO' : 'normal')}`);
+        log(`User Account Type: ${choice(config.user.accountType == 1 ? 'PRO' : 'normal')}`);
       }
 
       log(heading('\nPasteBin Config:'));
@@ -88,7 +88,7 @@ const file = (filePath, extension, name, userStatus) => {
           if (ans.confirmation) {
             // Use request.js
             let body = `api_dev_key=${config.dev.key}&api_option=paste&api_paste_code=${data}`;
-            body += `&api_user_key=${userStatus ? '' : config.user.key}&api_paste_name=${title}&api_paste_format=${ext}&api_paste_private=${config.pb.private}&api_paste_expire_date=${config.pb.expiration}`;
+            body += `&api_user_key=${userStatus ? '' : config.user.key}&api_paste_name=${title === undefined ? '' : title}&api_paste_format=${ext}&api_paste_private=${config.pb.private}&api_paste_expire_date=${config.pb.expiration}`;
             request.post({
               headers: { 'content-type': 'application/x-www-form-urlencoded' },
               url: 'https://pastebin.com/api/api_post.php',

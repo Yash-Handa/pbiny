@@ -9,6 +9,7 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Yash-Handa/pbiny.svg)
 ![NPM](https://img.shields.io/npm/l/pbiny.svg)
 ![npm](https://img.shields.io/npm/v/pbiny.svg)
+![node](https://img.shields.io/node/v/pbiny.svg)
 
 # pbiny
 

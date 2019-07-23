@@ -1,4 +1,16 @@
 version: 1.0.{build}
+pull_requests:
+  do_not_increment_build_number: true
 build_script:
 - cmd: npm install
-test: off
+test_script:
+- cmd: >-
+    npm install -g pbiny
+
+    pbiny -v
+
+    pbiny -h
+
+    pbiny up -h
+
+    pbiny usr

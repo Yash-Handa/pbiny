@@ -13,7 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/Yash-Handa/pbiny.git"
   },
-  "author": "Yash-Handa",
+  "author": {
+    "name": "Yash-Handa",
+    "email": "yashhanda7@yahoo.com",
+    "url": "https://yashhanda.me"
+  },
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/Yash-Handa/pbiny/issues"
@@ -22,6 +26,10 @@
   "preferGlobal": true,
   "bin": {
     "pbiny": "index.js"
+  },
+  "engines": {
+    "node": ">= 8.16.0",
+    "npm": ">= 6.4.1"
   },
   "devDependencies": {
     "eslint": "^5.16.0",

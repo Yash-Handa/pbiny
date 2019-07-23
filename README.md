@@ -4,6 +4,11 @@
 [![Known Vulnerabilities](https://snyk.io//test/github/Yash-Handa/pbiny/badge.svg?targetFile=package.json)](https://snyk.io//test/github/Yash-Handa/pbiny?targetFile=package.json)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Yash-Handa/pbiny.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Yash-Handa/pbiny/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Yash-Handa/pbiny.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Yash-Handa/pbiny/context:javascript)
+![GitHub top language](https://img.shields.io/github/languages/top/Yash-Handa/pbiny.svg)
+![David](https://img.shields.io/david/Yash-Handa/pbiny.svg)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Yash-Handa/pbiny.svg)
+![NPM](https://img.shields.io/npm/l/pbiny.svg)
+![npm](https://img.shields.io/npm/v/pbiny.svg)
 
 # pbiny
 

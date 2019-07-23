@@ -3,7 +3,7 @@ sudo: false
 
 language: node_js
 node_js:
-  - '8'
+  - '8.16.0'
 
 cache:
   directories:
@@ -14,7 +14,8 @@ install:
 
 script:
   - npm run lint
-  - npm install . -g
+  - npm install pbiny -g
   - pbiny -h
+  - pbiny -v
   - pbiny up -h
   - pbiny usr

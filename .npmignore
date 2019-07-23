@@ -1,3 +1,6 @@
 .vscode/
 .eslintrc.json
 Readme_Content/
+.travis.yml
+appveyor.yml
+README.md

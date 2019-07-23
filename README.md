@@ -1,4 +1,4 @@
-![terminal](https://badgen.net/badge/icon/terminal?icon=terminal&label.svg)
+![terminal](https://badgen.net/badge/icon/terminal?icon=terminal&label)
 [![Build Status](https://travis-ci.com/Yash-Handa/pbiny.svg?branch=master)](https://travis-ci.com/Yash-Handa/pbiny)
 [![Build status](https://ci.appveyor.com/api/projects/status/7de453rlc04hadye/branch/master?svg=true)](https://ci.appveyor.com/project/Yash-Handa/pbiny/branch/master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4565b0ecde96478b908bda84bdc2887f)](https://app.codacy.com/app/yashhanda7/pbiny?utm_source=github.com&utm_medium=referral&utm_content=Yash-Handa/pbiny&utm_campaign=Badge_Grade_Dashboard)
@@ -15,7 +15,52 @@
 
 # pbiny
 
-A Node.js CLI to interact with Pastebin directly from the terminal
+A npm package to interact with Pastebin directly from the terminal
+
+## Installation
+
+```shell
+$ npm install -g pbiny
+```
+
+This is a platform agnostic, command line interface for pastebin.com. We recommend it to be installed globally for accessing the tool from anywhere.
+
+## Usage
+
+This is a **zero-configuration**, **ready to use** CLI tool.
+
+It has 4 main commands:
+
+- `up ( upload )`
+- `dn ( download )`
+- `usr ( user )`
+- `config ( configuration )`
+
+And 2 options (flags):
+
+- `-h ( --help )`
+- `-v ( --version )`
+
+*note: These 2 options (-h and -v) are available to all the commands as well*
+
+### up [alias: upload]
+
+The **upload** command is used to upload content (file or text) to pastebin and produces a link to the created paste.
+
+It has 2 Data options and 3 Configurational options:
+
+- Data Options
+  - `-f ( --file )`
+  - `-t ( --text )`
+- Configurational Options
+  - `-n ( --name )`
+  - `-e ( --extension )`
+  - `-g ( --guest )`
+
+**Notes:**
+  - The **Configurational Options** can be used with both the **Data Options** but are completely optional
+  - Only one of the 2 Data Options should be passed to the **up command**
+  - The **up command** can be used without any options. (More about it below)
 
 ## Sample pics
 
@@ -51,8 +96,8 @@ If the editor does not work or returns nothing to create a paste then an option 
   <img alt="up" title="Demo of up command when editor does not work" src="/Readme_Content/pbin_up_err.png">
 </div><br>
 
-### todo
+### todo v1.0.2
 
 - Add badge for package size and no.of downloads
-- publish v1.0.2
-- modify index.js (for well come message)
+- Write the complete readme.md
+- modify index.js (for welcome message)

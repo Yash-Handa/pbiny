@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Yash-Handa/pbiny.svg?branch=master)](https://travis-ci.com/Yash-Handa/pbiny)
+[![Build status](https://ci.appveyor.com/api/projects/status/7de453rlc04hadye/branch/master?svg=true)](https://ci.appveyor.com/project/Yash-Handa/pbiny/branch/master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4565b0ecde96478b908bda84bdc2887f)](https://app.codacy.com/app/yashhanda7/pbiny?utm_source=github.com&utm_medium=referral&utm_content=Yash-Handa/pbiny&utm_campaign=Badge_Grade_Dashboard)
 [![Known Vulnerabilities](https://snyk.io//test/github/Yash-Handa/pbiny/badge.svg?targetFile=package.json)](https://snyk.io//test/github/Yash-Handa/pbiny?targetFile=package.json)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Yash-Handa/pbiny.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Yash-Handa/pbiny/alerts/)

@@ -32,14 +32,14 @@ This is a **zero-configuration**, **ready to use** CLI tool.
 It has 4 main commands:
 
 - [`up ( upload )`](#up-alias-upload)
-- `dn ( download )`
-- `usr ( user )`
-- `config ( configuration )`
+- [`dn ( download )`](#dn-alias-download)
+- [`usr ( user )`]()
+- [`config ( configuration )`]()
 
 And 2 options (flags):
 
-- `-h ( --help )`
-- `-v ( --version )`
+- [`-h ( --help )`]()
+- [`-v ( --version )`]()
 
 *note: These 2 options (-h and -v) are available to all the commands as well*
 
@@ -51,18 +51,18 @@ The **upload** command is used to upload content (file or text) to pastebin and 
 It has 2 Data Options and 3 Configurational Options:
 
 - Data Options
-  - [`-f ( --file )`]()
-  - [`-t ( --text )`]()
+  - [`-f ( --file )`](#up--f-alias---file)
+  - [`-t ( --text )`](#up--t-alias---text)
 - Configurational Options
-  - [`-n ( --name )`]()
-  - [`-e ( --extension )`]()
-  - [`-g ( --guest )`]()
+  - [`-n ( --name )`](#up---f---t---n-alias---name)
+  - [`-e ( --extension )`](#up---f---t---e-alias---extension)
+  - [`-g ( --guest )`](#up---f---t---g-alias---guest)
 
 **Notes:**
 
   - The **Configurational Options** can be used with both the **Data Options** but are completely optional
   - Only one of the 2 Data Options should be passed to the **up command**
-  - The **up command** can be used without any options. (More about it [below]())
+  - The **up command** can be used without any options. (More about it [below](#up-without-any-option))
 
 ### up -f [alias: --file]
 
@@ -74,7 +74,7 @@ The **-f** option of the **up** command is used to provide the relative or absol
 
 The maximum file size is **512 KB for Guest and Normal users** and **10 MB for PRO users**. See Pastebin specifications [here](https://pastebin.com/faq#9).
 
-If some or all the Configurational Options ([`-n`](), [`-e`](), [`-g`]()) are not provided then the defaults are used. The default options / settings can be seen and modified by the [`config`]() command.
+If some or all the Configurational Options ([`-n`](up---f---t---n-alias---name), [`-e`](#up---f---t---e-alias---extension), [`-g`](#up---f---t---g-alias---guest)) are not provided then the defaults are used. The default options / settings can be seen and modified by the [`config`]() command.
 
 Initial Defaults:
 
@@ -106,7 +106,7 @@ is that genius has its limits.
 
 The **-t** option of the **up** command is used to provide the text which will be uploaded to pastebin.
 
-If some or all the Configurational Options ([`-n`](), [`-e`](), [`-g`]()) are not provided then the defaults are used. The default options / settings can be seen and modified by the [`config`]() command.
+If some or all the Configurational Options ([`-n`](up---f---t---n-alias---name), [`-e`](#up---f---t---e-alias---extension), [`-g`](#up---f---t---g-alias---guest)) are not provided then the defaults are used. The default options / settings can be seen and modified by the [`config`]() command.
 
 Initial Defaults:
 
@@ -125,7 +125,7 @@ This command should produce a pastebin url which points to the Paste just been c
 $ pbiny up -t "This is a sample post ^_^" -n "Sample Post"
 ```
 
-The **-n** option of the **up** command is optional and can be passed to both the [**-f**]() and [**-t**](). This option takes a string as argument which will be used to create the name / title of the paste.
+The **-n** option of the **up** command is optional and can be passed to both the [**-f**](#up--f-alias---file) and [**-t**](#up--t-alias---text). This option takes a string as argument which will be used to create the name / title of the paste.
 
 If **-n** is not provided then the title of the paste is set to **untitled**.
 
@@ -135,7 +135,7 @@ If **-n** is not provided then the title of the paste is set to **untitled**.
 $ pbiny up -t "This is a sample post ^_^" -e "text"
 ```
 
-The **-e** option of the **up** command is optional and can be passed to both the [**-f**]() and [**-t**](). This option takes a string as argument which will be used to set the extension / formate (syntax highlighting) of the paste.
+The **-e** option of the **up** command is optional and can be passed to both the [**-f**](#up--f-alias---file) and [**-t**](#up--t-alias---text). This option takes a string as argument which will be used to set the extension / formate (syntax highlighting) of the paste.
 
 All the valid values for **-e** can be found at pastebin api specifications [here](https://pastebin.com/api#5).
 
@@ -192,10 +192,10 @@ The **download** command is used to download content of a paste from pastebin an
 It has 1 Required Option and 2 Configurational Options:
 
 - Required Option
-  - [`-u ( --url )`]()
+  - [`-u ( --url )`](#dn--u-alias---url)
 - Configurational Options
-  - [`-f ( --file )`]()
-  - [`-p ( --private )`]()
+  - [`-f ( --file )`](#dn--u--f-alias---file)
+  - [`-p ( --private )`](#dn--u--p-alias---private)
 
 ### dn -u [alias: --url]
 

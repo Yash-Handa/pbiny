@@ -1,3 +1,4 @@
+![terminal](https://badgen.net/badge/icon/terminal?icon=terminal&label.svg)
 [![Build Status](https://travis-ci.com/Yash-Handa/pbiny.svg?branch=master)](https://travis-ci.com/Yash-Handa/pbiny)
 [![Build status](https://ci.appveyor.com/api/projects/status/7de453rlc04hadye/branch/master?svg=true)](https://ci.appveyor.com/project/Yash-Handa/pbiny/branch/master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4565b0ecde96478b908bda84bdc2887f)](https://app.codacy.com/app/yashhanda7/pbiny?utm_source=github.com&utm_medium=referral&utm_content=Yash-Handa/pbiny&utm_campaign=Badge_Grade_Dashboard)
@@ -10,6 +11,7 @@
 ![NPM](https://img.shields.io/npm/l/pbiny.svg)
 ![npm](https://img.shields.io/npm/v/pbiny.svg)
 ![node](https://img.shields.io/node/v/pbiny.svg)
+![lines](https://badgen.net/lgtm/lines/g/Yash-Handa/pbiny/javascript.svg)
 
 # pbiny
 
@@ -48,3 +50,9 @@ If the editor does not work or returns nothing to create a paste then an option 
 <div>
   <img alt="up" title="Demo of up command when editor does not work" src="/Readme_Content/pbin_up_err.png">
 </div><br>
+
+### todo
+
+- Add badge for package size and no.of downloads
+- publish v1.0.2
+- modify index.js (for well come message)

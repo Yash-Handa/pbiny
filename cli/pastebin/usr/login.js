@@ -96,7 +96,7 @@ const loginUser = () => inquirer
                 const success = await editENV(data, 'update');
                 if (success === 0) {
                   log(heading('\nDefaults Updated !!!'));
-                  log('You can see your defaults at', cli('$ pbin config'), '\n');
+                  log('You can see your defaults at', cli('$ pbiny config'), '\n');
                   return 0;
                 }
               } else {

@@ -20,8 +20,8 @@ const def = () => {
   log('');
 
   log(heading('How to Edit:'));
-  log('  run the', cli('$ pbin config -h'), 'command to see all flags that can be used to edit the configurations.');
-  log(heading('  Example:'), cli('$ pbin config --ext --priv'), 'will allow you to change the Past Extension and Privacy.');
+  log('  run the', cli('$ pbiny config -h'), 'command to see all flags that can be used to edit the configurations.');
+  log(heading('  Example:'), cli('$ pbiny config --ext --priv'), 'will allow you to change the Past Extension and Privacy.');
   log('');
 };
 

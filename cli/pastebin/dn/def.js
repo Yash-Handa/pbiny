@@ -23,7 +23,7 @@ function getRequest(url) {
       }
       if (body === specialError) {
         log(err('Error, this is a private paste. If this is your private paste and you are logged in then add'), errFocus('-p flag'), err('to the command'));
-        log(dim(`A user can be Logged in at ${cli('$ pbin usr')}\n`));
+        log(dim(`A user can be Logged in at ${cli('$ pbiny usr')}\n`));
         resolve(1);
         return 1;
       }

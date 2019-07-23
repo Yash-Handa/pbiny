@@ -23,7 +23,7 @@ yargs
       },
       t: {
         alias: 'text',
-        describe: 'Text to be uploaded to https://pastebin.com with default settings. (check $ pbin config)',
+        describe: 'Text to be uploaded to https://pastebin.com with default settings. (check $ pbiny config)',
         type: 'string',
         requiresArg: true,
         nargs: 1,
@@ -185,7 +185,7 @@ yargs
   // help text
   .alias('h', 'help')
   .help('help')
-  .usage('Usage: pbin -x [num]')
+  .usage('Usage: pbiny <command> [--option]')
   .showHelpOnFail(false, 'Specify --help for available options');
 
 module.exports = yargs;

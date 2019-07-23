@@ -65,7 +65,7 @@ const def = () => {
   log(heading('User Info:'));
   if (config.user.key === '') {
     log(`No user is logged in so ${choice('Guest User')} is used`);
-    log(dim(`A user can be Logged in at ${cli('$ pbin usr')}`));
+    log(dim(`A user can be Logged in at ${cli('$ pbiny usr')}`));
   } else {
     log(`User Name: ${choice(config.user.userName)}`);
     log(`User Email: ${choice(config.user.email)}`);

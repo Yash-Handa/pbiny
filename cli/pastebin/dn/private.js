@@ -10,7 +10,7 @@ function getPrivate(key) {
   return new Promise(((resolve, reject) => {
     if (config.user.key === '') {
       log(err('No user is logged in so the private Paste cannot be fetched'));
-      log(dim(`A user can be Logged in at ${cli('$ pbin usr')}\n`));
+      log(dim(`A user can be Logged in at ${cli('$ pbiny usr')}\n`));
       resolve(1);
       return 1;
     }

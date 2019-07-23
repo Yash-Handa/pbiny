@@ -56,7 +56,7 @@ const file = (filePath, extension, name, userStatus) => {
       log(heading('User Info:'));
       if (config.user.key === '' || userStatus) {
         log(`No user is logged in so ${choice('Guest User')} is used`);
-        log(dim(`A user can be Logged in at ${cli('$ pbin usr')}`));
+        log(dim(`A user can be Logged in at ${cli('$ pbiny usr')}`));
       } else {
         log(`User Name: ${choice(config.user.userName)}`);
         log(`User Email: ${choice(config.user.email)}`);
@@ -64,7 +64,7 @@ const file = (filePath, extension, name, userStatus) => {
       }
 
       log(heading('\nPasteBin Config:'));
-      log(dim(`The config can be changed at ${cli('$ pbin config')}`));
+      log(dim(`The config can be changed at ${cli('$ pbiny config')}`));
       log(`Paste Title: ${choice(title)}`);
       log(`Paste Format: ${choice(ext)}`);
       log(dim(`(See all valid values of Paste Formate at ${url('https://pastebin.com/api#5')} )`));

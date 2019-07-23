@@ -8,7 +8,7 @@ const { log } = console;
 const def = () => {
   if (config.user.key === '') {
     log(err('No user is logged in'));
-    log(dim('You can Login an user at'), cli('$ pbin usr -l'), '\n');
+    log(dim('You can Login an user at'), cli('$ pbiny usr -l'), '\n');
     return 1;
   }
 

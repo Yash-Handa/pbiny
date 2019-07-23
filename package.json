@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yash-Handa/pbin.git"
+    "url": "git+https://github.com/Yash-Handa/pbiny.git"
   },
   "author": "Yash-Handa",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/Yash-Handa/pbin/issues"
+    "url": "https://github.com/Yash-Handa/pbiny/issues"
   },
-  "homepage": "https://github.com/Yash-Handa/pbin#readme",
+  "homepage": "https://github.com/Yash-Handa/pbiny#readme",
   "preferGlobal": true,
   "bin": {
     "pbiny": "index.js"

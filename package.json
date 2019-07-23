@@ -1,6 +1,6 @@
 {
   "name": "pbiny",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "A npm package to interact with Pastebin directly from the terminal",
   "main": "index.js",
   "scripts": {

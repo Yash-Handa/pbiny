@@ -337,8 +337,4 @@ Both these options take a boolean i.e., they are a flag / switch and no argument
 
 <p align="center"><br><br>
   <img alt="kitten" src="/Readme_Content/copy_cat.gif">
-</p><br>
-
-### todo v1.0.2
-
-- modify index.js (for welcome message)
+</p>

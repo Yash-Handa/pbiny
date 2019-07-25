@@ -12,6 +12,7 @@
 ![npm](https://img.shields.io/npm/v/pbiny.svg)
 ![node](https://img.shields.io/node/v/pbiny.svg)
 ![lines](https://badgen.net/lgtm/lines/g/Yash-Handa/pbiny/javascript.svg)
+![npm](https://img.shields.io/npm/dm/pbiny)
 
 # pbiny
 
@@ -340,7 +341,4 @@ Both these options take a boolean i.e., they are a flag / switch and no argument
 
 ### todo v1.0.2
 
-- Add badge for package size and no.of downloads
-- Write the complete readme.md
 - modify index.js (for welcome message)
-- Add keywords

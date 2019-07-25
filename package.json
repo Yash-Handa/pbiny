@@ -27,6 +27,18 @@
   "bin": {
     "pbiny": "index.js"
   },
+  "keywords": [
+    "pbiny",
+    "pastebin",
+    "Pastebin",
+    "pbin",
+    "pb",
+    "CLI",
+    "command line",
+    "npm",
+    "package",
+    "node.js"
+  ],
   "engines": {
     "node": ">= 8.16.0",
     "npm": ">= 6.4.1"

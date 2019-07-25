@@ -33,13 +33,13 @@ It has 4 main commands:
 
 - [`up ( upload )`](#up-alias-upload)
 - [`dn ( download )`](#dn-alias-download)
-- [`usr ( user )`]()
+- [`usr ( user )`](#usr-alias-user)
 - [`config ( configuration )`](#config-alias-configuration)
 
 And 2 options (flags):
 
-- [`-h ( --help )`]()
-- [`-v ( --version )`]()
+- `-h ( --help )`
+- `-v ( --version )`
 
 *note: These 2 options (-h and -v) are available to all the commands as well*
 
@@ -148,7 +148,7 @@ If **-e** is not provided then the formate of the paste is set to the value defi
 $ pbiny up -t "This is a sample post ^_^" -e "text" -g
 ```
 
-You can very easily login to your pastebin account using the [`usr`]() command. While you are logged in, you may want to create a paste as **Guest User** (anonymously). The **-g** flag is used for this purpose only
+You can very easily login to your pastebin account using the [`usr`](#usr-alias-user) command. While you are logged in, you may want to create a paste as **Guest User** (anonymously). The **-g** flag is used for this purpose only
 
 The **-g** options takes a boolean i.e., it is a flag / switch and no argument is require for it.
 
@@ -241,11 +241,11 @@ $ pbiny dn -u "pastebin.com/xxxxxxx" -f "./pbiny_test/sample_out.txt" -p
 
 Pastebin provides an option of creating a private bin i.e., only the user who created the post can view it.
 
-the **-p** option of **dn** command allows a **logged in** user to view his/her private pastes by pbiny. It throws an error if the user is not logged in, the paste does not belongs to the logged in user or the paste is not private. 
+the **-p** option of **dn** command allows a **logged in** user to view his/her private pastes by pbiny. It throws an error if the user is not logged in, the paste does not belongs to the logged in user or the paste is not private.
 
 The **-p** option takes a boolean i.e., it is a flag / switch and no argument is require for it.
 
-*You can very easily login to your pastebin account using the [`usr`]() command.*
+*You can very easily login to your pastebin account using the [`usr`](#usr-alias-user) command.*
 
 **Example:**
 
@@ -287,6 +287,29 @@ $ pbiny config --ext --priv --f_ext
 <hr>
 
 ### usr [alias: user]
+
+```shell
+$ pbiny usr
+```
+
+The **usr** command is used to see the currently logged in user (**User Name**, **Email** and **Account Type**). This command has 2 options:
+
+- `-l ( --login )`
+- `--logout`
+
+Both these options take a boolean i.e., they are a flag / switch and no argument is require for them.
+
+- `-l` [alias: --login] option allows a user to login with his / her Username and Password.
+
+**Note:** If you have created your Pastebin account using Google, Facebook or Twitter then you have to set your password to use any tool build on Pastebin here: [https://pastebin.com/password](https://pastebin.com/password)
+
+- `--logout` option allows a logged in user to log out of the pbiny tool.
+
+**Example:**
+
+<p align="center"><br><br>
+  <img alt="kitten" src="https://media.giphy.com/media/oCCLHVNt8YO64/giphy.gif">
+</p><br><br>
 
 ### todo v1.0.2
 

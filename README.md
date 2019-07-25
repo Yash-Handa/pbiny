@@ -199,9 +199,58 @@ It has 1 Required Option and 2 Configurational Options:
 
 ### dn -u [alias: --url]
 
+```shell
+$ pbiny dn -u "pastebin.com/xxxxxxx"
+```
+
+The **-u** option of the **dn** command is a **required** option and is used to fetch the raw content of the paste to whom the url (-u) points
+
+The -u option takes a string as an argument. The string can be of the following formate:
+
+- "https://pastebin.com/xxxxxxx"
+- "pastebin.com/xxxxxxx"
+- "xxxxxxx"
+
+where xxxxxxx is the key of the paste.
+
+If the [`-f ( --file )`](#dn--u--f-alias---file) option is not provided the fetched data is simply displayed to the command line.
+
+**Example:**
+
 ### dn -u -f [alias: --file]
 
+```shell
+$ pbiny dn -u "pastebin.com/xxxxxxx" -f "./pbiny_test/sample_out.txt"
+```
+
+The **-f** option of the **dn** command is used for providing the relative path to the file to which the fetched data is to be stored.
+
+If the file extension is not provided then the default option will be used. The default options / settings can be seen and modified by the [`config`]() command.
+
+**Note:** The provided file path should not be taken i.e., it will not over write an already existing file.
+
+**Example:**
+
 ### dn -u -p [alias: --private]
+
+```shell
+$ pbiny dn -u "pastebin.com/xxxxxxx" -f "./pbiny_test/sample_out.txt" -p
+```
+
+Pastebin provides an option of creating a private bin i.e., only the user who created the post can view it.
+
+the **-p** option of **dn** command allows a **logged in** user to view his/her private pastes by pbiny. It throws an error if the user is not logged in, the paste does not belongs to the logged in user or the paste is not private. 
+
+The **-p** options takes a boolean i.e., it is a flag / switch and no argument is require for it.
+
+*You can very easily login to your pastebin account using the [`usr`]() command.*
+
+**Example:**
+
+
+### config [alias: configuration]
+
+The **config** option is used to
 
 ### todo v1.0.2
 

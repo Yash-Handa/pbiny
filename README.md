@@ -34,7 +34,7 @@ It has 4 main commands:
 - [`up ( upload )`](#up-alias-upload)
 - [`dn ( download )`](#dn-alias-download)
 - [`usr ( user )`]()
-- [`config ( configuration )`]()
+- [`config ( configuration )`](#config-alias-configuration)
 
 And 2 options (flags):
 
@@ -43,6 +43,7 @@ And 2 options (flags):
 
 *note: These 2 options (-h and -v) are available to all the commands as well*
 
+<hr>
 
 ### up [alias: upload]
 
@@ -74,7 +75,7 @@ The **-f** option of the **up** command is used to provide the relative or absol
 
 The maximum file size is **512 KB for Guest and Normal users** and **10 MB for PRO users**. See Pastebin specifications [here](https://pastebin.com/faq#9).
 
-If some or all the Configurational Options ([`-n`](up---f---t---n-alias---name), [`-e`](#up---f---t---e-alias---extension), [`-g`](#up---f---t---g-alias---guest)) are not provided then the defaults are used. The default options / settings can be seen and modified by the [`config`]() command.
+If some or all the Configurational Options ([`-n`](up---f---t---n-alias---name), [`-e`](#up---f---t---e-alias---extension), [`-g`](#up---f---t---g-alias---guest)) are not provided then the defaults are used. The default options / settings can be seen and modified by the [`config`](#config-alias-configuration) command.
 
 Initial Defaults:
 
@@ -106,7 +107,7 @@ is that genius has its limits.
 
 The **-t** option of the **up** command is used to provide the text which will be uploaded to pastebin.
 
-If some or all the Configurational Options ([`-n`](up---f---t---n-alias---name), [`-e`](#up---f---t---e-alias---extension), [`-g`](#up---f---t---g-alias---guest)) are not provided then the defaults are used. The default options / settings can be seen and modified by the [`config`]() command.
+If some or all the Configurational Options ([`-n`](up---f---t---n-alias---name), [`-e`](#up---f---t---e-alias---extension), [`-g`](#up---f---t---g-alias---guest)) are not provided then the defaults are used. The default options / settings can be seen and modified by the [`config`](#config-alias-configuration) command.
 
 Initial Defaults:
 
@@ -139,7 +140,7 @@ The **-e** option of the **up** command is optional and can be passed to both th
 
 All the valid values for **-e** can be found at pastebin api specifications [here](https://pastebin.com/api#5).
 
-If **-e** is not provided then the formate of the paste is set to the value defined in [config]().
+If **-e** is not provided then the formate of the paste is set to the value defined in [config](#config-alias-configuration).
 
 ### up < -f | -t > -g [alias: --guest]
 
@@ -184,6 +185,7 @@ If the editor does not work or returns nothing to create a paste then a prompt f
 
 **Example:**
 
+<hr>
 
 ### dn [alias: download]
 
@@ -225,7 +227,7 @@ $ pbiny dn -u "pastebin.com/xxxxxxx" -f "./pbiny_test/sample_out.txt"
 
 The **-f** option of the **dn** command is used for providing the relative path to the file to which the fetched data is to be stored.
 
-If the file extension is not provided then the default option will be used. The default options / settings can be seen and modified by the [`config`]() command.
+If the file extension is not provided then the default option will be used. The default options / settings can be seen and modified by the [`config`](#config-alias-configuration) command.
 
 **Note:** The provided file path should not be taken i.e., it will not over write an already existing file.
 
@@ -241,16 +243,50 @@ Pastebin provides an option of creating a private bin i.e., only the user who cr
 
 the **-p** option of **dn** command allows a **logged in** user to view his/her private pastes by pbiny. It throws an error if the user is not logged in, the paste does not belongs to the logged in user or the paste is not private. 
 
-The **-p** options takes a boolean i.e., it is a flag / switch and no argument is require for it.
+The **-p** option takes a boolean i.e., it is a flag / switch and no argument is require for it.
 
 *You can very easily login to your pastebin account using the [`usr`]() command.*
 
 **Example:**
 
+<hr>
 
 ### config [alias: configuration]
 
-The **config** option is used to
+```shell
+$ pbiny config
+```
+
+The **config** command is used to see the defaults set for the application. You can change all the default values by passing in the following options:
+
+- Upload Config:
+  - `--ext ( --extension or --format )`
+  - `--exp ( --expiration )`
+  - `--priv ( --privacy )`
+- Download Config:
+  - `--f_ext ( --file_extension )`
+
+All these options take a boolean i.e., they are a flag / switch and no argument is require for them.
+
+- `--ext` [aliases: --extension, --format ] option is used to provide the default formate of the paste created by the [**up command**](#up-alias-upload). It is used when the up command do not provide the optional [`-e`](#up---f---t---e-alias---extension) option. The complete list of valid extensions / format / Syntax is given [here](https://pastebin.com/api#5).
+
+- `--exp` [alias: --expiration ] option is used to provide the default expiration for the paste created by the [**up command**](#up-alias-upload). The complete list of valid expiration values is given [here](https://pastebin.com/api#6).
+
+- `--priv` [alias: --privacy ] option is used to provide the default privacy for the paste created by the [**up command**](#up-alias-upload). The complete list of valid privacy values is given [here](https://pastebin.com/api#7).
+
+- `--f_ext` [alias: --file_extension ] option is used to provide the default file extension for the file created by the [**dn command**](#dn-alias-download) passing [`-f`](#dn--u--f-alias---file) option. It can take any valid file extension like txt, js, json, py.
+
+**Syntax Example:**
+
+```shell
+$ pbiny config --ext --priv --f_ext
+```
+
+**Example:**
+
+<hr>
+
+### usr [alias: user]
 
 ### todo v1.0.2
 

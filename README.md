@@ -88,7 +88,7 @@ This command should produce a pastebin url which points to the Paste just been c
 
 **Example:**
 
-<p align="center"><br><br>
+<p align="center"><br>
   <img alt="upoad file content" src="/Readme_Content/up-f.gif">
 </p><br>
 
@@ -124,7 +124,7 @@ This command should produce a pastebin url which points to the Paste just been c
 
 **Example:**
 
-<p align="center"><br><br>
+<p align="center"><br>
   <img alt="upload text content" src="/Readme_Content/up-t.gif">
 </p><br>
 
@@ -184,7 +184,7 @@ Works great with cli test editors like [**nano**](https://www.nano-editor.org/) 
 
 **Example:**
 
-<p align="center"><br><br>
+<p align="center"><br>
   <img alt="upload content written in editor" src="/Readme_Content/up.gif">
 </p><br>
 
@@ -194,7 +194,7 @@ If the editor does not work or returns nothing to create a paste then a prompt f
 
 **Example:**
 
-<p align="center"><br><br>
+<p align="center"><br>
   <img alt="muli-line input content" src="/Readme_Content/up-err.gif">
 </p><br>
 
@@ -303,7 +303,7 @@ $ pbiny config --ext --priv --f_ext
 
 **Example:**
 
-<p align="center"><br><br>
+<p align="center"><br>
   <img alt="config" src="/Readme_Content/config.gif">
 </p><br>
 
@@ -330,7 +330,7 @@ Both these options take a boolean i.e., they are a flag / switch and no argument
 
 **Example:**
 
-<p align="center"><br><br>
+<p align="center"><br>
   <img alt="usr" src="/Readme_Content/usr.gif">
 </p><br><br>
 

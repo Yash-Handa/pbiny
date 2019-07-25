@@ -88,6 +88,10 @@ This command should produce a pastebin url which points to the Paste just been c
 
 **Example:**
 
+<p align="center"><br><br>
+  <img alt="upoad file content" src="/Readme_Content/up-f.gif">
+</p><br>
+
 ### up -t [alias: --text]
 
 Single line text:
@@ -119,6 +123,10 @@ Initial Defaults:
 This command should produce a pastebin url which points to the Paste just been created with your text.
 
 **Example:**
+
+<p align="center"><br><br>
+  <img alt="upload text content" src="/Readme_Content/up-t.gif">
+</p><br>
 
 ### up < -f | -t > -n [alias: --name]
 
@@ -154,8 +162,6 @@ The **-g** options takes a boolean i.e., it is a flag / switch and no argument i
 
 *Note: The **-g** flag has it's effect only when a user is logged in otherwise it has no effect.*
 
-**Example:**
-
 ### up (without any option)
 
 ```shell
@@ -178,12 +184,19 @@ Works great with cli test editors like [**nano**](https://www.nano-editor.org/) 
 
 **Example:**
 
+<p align="center"><br><br>
+  <img alt="upload content written in editor" src="/Readme_Content/up.gif">
+</p><br>
 
 If the editor does not work or returns nothing to create a paste then a prompt for entering data (multi-line) will be displayed.
 
 **Note:** you cannot edit the previous lines in this mode.
 
 **Example:**
+
+<p align="center"><br><br>
+  <img alt="muli-line input content" src="/Readme_Content/up-err.gif">
+</p><br>
 
 <hr>
 
@@ -202,7 +215,7 @@ It has 1 Required Option and 2 Configurational Options:
 ### dn -u [alias: --url]
 
 ```shell
-$ pbiny dn -u "pastebin.com/xxxxxxx"
+$ pbiny dn -u "pastebin.com/zSHnKsSf"
 ```
 
 The **-u** option of the **dn** command is a **required** option and is used to fetch the raw content of the paste to whom the url (-u) points
@@ -219,10 +232,14 @@ If the [`-f ( --file )`](#dn--u--f-alias---file) option is not provided the fetc
 
 **Example:**
 
+<p align="center"><br><br>
+  <img alt="download content" src="/Readme_Content/dn.gif">
+</p><br>
+
 ### dn -u -f [alias: --file]
 
 ```shell
-$ pbiny dn -u "pastebin.com/xxxxxxx" -f "./pbiny_test/sample_out.txt"
+$ pbiny dn -u "pastebin.com/zSHnKsSf" -f "./pbiny_test/sample_out.txt"
 ```
 
 The **-f** option of the **dn** command is used for providing the relative path to the file to which the fetched data is to be stored.
@@ -232,6 +249,10 @@ If the file extension is not provided then the default option will be used. The 
 **Note:** The provided file path should not be taken i.e., it will not over write an already existing file.
 
 **Example:**
+
+<p align="center"><br><br>
+  <img alt="download to file" src="/Readme_Content/dn-f.gif">
+</p><br>
 
 ### dn -u -p [alias: --private]
 
@@ -246,8 +267,6 @@ the **-p** option of **dn** command allows a **logged in** user to view his/her 
 The **-p** option takes a boolean i.e., it is a flag / switch and no argument is require for it.
 
 *You can very easily login to your pastebin account using the [`usr`](#usr-alias-user) command.*
-
-**Example:**
 
 <hr>
 
@@ -284,6 +303,10 @@ $ pbiny config --ext --priv --f_ext
 
 **Example:**
 
+<p align="center"><br><br>
+  <img alt="config" src="/Readme_Content/config.gif">
+</p><br>
+
 <hr>
 
 ### usr [alias: user]
@@ -308,8 +331,12 @@ Both these options take a boolean i.e., they are a flag / switch and no argument
 **Example:**
 
 <p align="center"><br><br>
-  <img alt="kitten" src="/Readme_Content/copy_cat.gif">
+  <img alt="usr" src="/Readme_Content/usr.gif">
 </p><br><br>
+
+<p align="center"><br><br>
+  <img alt="kitten" src="/Readme_Content/copy_cat.gif">
+</p><br>
 
 ### todo v1.0.2
 
